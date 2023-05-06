@@ -53,7 +53,7 @@ Python için Boş Class ve Instance Oluşturma
 class calisan: //boş bir class
 	pass
 
-calisan1=calisan() //birinstance
+calisan1=calisan() //bir instance
 ```
 
 Python için Kullanışlı bir Class ve Instance oluşturma
@@ -76,6 +76,19 @@ class calisan:
 		self.name = name
 		self.surname = surname
 		self.age = age
+		
+calisan1=calisan("Ali","Veli",20)
+```
+
+Farkı daha iyi ayırt edebilmeniz için:
+
+```py
+class calisan:
+  def __init__(self,a,b,c): //self parametresi instance'nin kendisidir.
+		print("__init__ çalışıyor.")
+		self.name = a
+		self.surname = b
+		self.age = c
 		
 calisan1=calisan("Ali","Veli",20)
 ```
