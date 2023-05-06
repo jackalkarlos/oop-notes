@@ -111,3 +111,47 @@ class calisan:
 		
 calisan1=calisan("Ali","Veli",20)
 ```
+
+<h2> Class Methodları </h2Z
+
+```py
+class calisan:
+	def __init__(self,name,surname,age):
+		self.name = name
+		self.surname = surname
+		self.age = age
+	def show_info(self):
+		print(f"Ad: {self.name}, Soyad: {self.surname}, Yaş: {self.age}")
+
+worker1=calisan("Ali","Veli",20)
+
+worker1.show_info() //Instance üzerinden show_info method çağrısı çağırılıyor.
+
+calisan.show_info(worker1) //Class methodu çağırılıyor ve calisan1 değeri gönderiliyor,	
+```
+
+Sondaki her 2 komutta aynı çıktıyı verecektir. Amaç, bir class içerisinde fonksiyon tanımlayarak bunu self değerine göre çağırmaktır.
+
+Değerlerimizden biri girilmezse, veya default bir değere sahip olmasını istersekte aşağıdaki gibi bir yaklaşım sergileyebiliriz.
+
+```py
+class calisan:
+	def __init__(self,name,surname="soyisim girilmedi",age=0):
+		self.name = name
+		self.surname = surname
+		self.age = age
+	def show_info(self):
+		print(f"Ad: {self.name}, Soyad: {self.surname}, Yaş: {self.age}")
+
+worker1=calisan("Ali")
+
+worker1.show_info()
+```
+
+Output:
+
+```
+Ad: Ali, Soyad: soyisim girilmedi, Yaş: 0
+```
+
+	
