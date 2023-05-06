@@ -92,3 +92,22 @@ class calisan:
 		
 calisan1=calisan("Ali","Veli",20)
 ```
+
+<h2>Attribute</h2>
+
+Attribute nitelik anlamı taşır.
+
+"name" bir attribute'dir, isim niteliğidir.
+"surname" bir attribute'dir, soyisim niteliğidir.
+"age" bir attribute'dir, yaş niteliğidir.
+
+```py
+class calisan:
+  def __init__(self,name,surname,age):
+		print("__init__ çalışıyor.")
+		self.name = name
+		self.surname = surname
+		self.age = age
+		
+calisan1=calisan("Ali","Veli",20)
+```
