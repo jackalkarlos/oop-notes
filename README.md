@@ -112,7 +112,7 @@ class calisan:
 calisan1=calisan("Ali","Veli",20)
 ```
 
-<h2> Class Methodları </h2Z
+<h2> Class Methodları </h2>
 
 ```py
 class calisan:
@@ -152,6 +152,15 @@ Output:
 
 ```
 Ad: Ali, Soyad: soyisim girilmedi, Yaş: 0
+```
+
+
+<h3> Method Input Sırası </h3>
+
+Normalde inputları sıraya göre veririz ancak soyadı kısmını atlamak istiyorsak aşağıdaki gibi bir kullanım sergileyebiliriz.
+
+```py
+worker1=calisan("Ali",age=20)
 ```
 
 	
