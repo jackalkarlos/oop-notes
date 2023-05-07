@@ -174,3 +174,64 @@ Instance variable'leri bir sözlük halinde görüntülemek için:
 ```
 print(calisan1.__dict__)
 ```
+
+<h2> Class Variables </h2>
+
+Class Variables, sınıfa ait değişkenlerdir. Aşağıdaki örnekte zam oranı örneği bir class variabledir.
+
+```py
+class calisan:
+	zam_orani=1.1
+	def __init__(self,name,surname,age):
+		self.name = name
+		self.surname = surname
+		self.age = age
+calisan1=calisan("Ali","Veli",20)
+```
+
+Önce calisan1 instance'sinin değişkenlerine bakalım:
+
+```py
+print(calisan1.__dict__)
+
+{'name': 'Ali', 'surname': 'Veli', 'age': 20}
+```
+
+Daha sonrasında calisan class'ının değişkenlerine bakalım:
+
+```py
+print(calisan.__dict__)
+{'__module__': '__main__', 'zam_orani': 1.1, '__init__': <function calisan.__init__ at 0x7f029dabde40>, '__dict__': <attribute '__dict__' of 'calisan' objects>, '__weakref__': <attribute '__weakref__' of 'calisan' objects>, '__doc__': None}
+```
+
+Class variable'ler özellikle başka bir tanımlama yapılmadığı sürece her instance'ye aittir. Sözlükleri içerisinde bulunmasa da, class içerisinde oldukları için zam oranına her instance için erişim sağlanabilir.
+
+```py
+print(calisan1.zam_orani)
+1.1
+```
+
+Her instance için ayrı bir zam oranı belirlenebilir.
+
+```py
+class calisan:
+	zam_orani=1.1
+	def __init__(self,name,surname,age):
+		self.name = name
+		self.surname = surname
+		self.age = age
+calisan1=calisan("Ali","Veli",20)
+calisan1.zam_orani=1.2
+print(calisan1.zam_orani)
+
+calisan2=calisan("Ali","Veli",20)
+print(calisan2.zam_orani)
+
+
+1.2
+1.1
+```
+
+
+
+
