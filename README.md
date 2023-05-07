@@ -56,7 +56,7 @@ class calisan: //boş bir class
 calisan1=calisan() //bir instance
 ```
 
-Python için Kullanışlı bir Class ve Instance oluşturma
+<h2>Python için Kullanışlı bir Class ve Instance oluşturma</h2>
 
 Bu kodda "calisan" adında bir class'ımız var. Classlar çağırıldığında otomatik olarak ilk devreye giren fonksiyon  `__init__` fonksiyonudur. 
 
@@ -163,4 +163,14 @@ Normalde inputları sıraya göre veririz ancak soyadı kısmını atlamak istiy
 worker1=calisan("Ali",age=20)
 ```
 
-	
+<h2> Instance Variables </h2>
+
+Nesnelerin değişkeni demektir.
+
+`self.name` bir instance variable'dir.
+
+Instance variable'leri bir sözlük halinde görüntülemek için:
+
+```
+print(calisan1.__dict__)
+```
